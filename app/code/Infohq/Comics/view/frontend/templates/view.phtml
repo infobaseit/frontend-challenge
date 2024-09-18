@@ -1,0 +1,50 @@
+<?php $comic = $block->getComicDetails($this->getRequest()->getParam('id')); ?>
+
+<div class="hq-details">
+    <div class="hq-wrapper">
+        <?php if ($comic): ?>
+            <div class="hq-tittle">
+                <h2><?= $comic['title'] ?></h2>
+            </div>
+            <div class="book-detail">
+                <img class="book-img" src="<?= $comic['thumbnail']['path'] . '.' . $comic['thumbnail']['extension'] ?>" alt="<?= $comic['title'] ?>">
+                <div class="hq-info">
+                    <div>
+                        <!-- Series -->
+                        <?php if (isset($comic['series']['name'])): ?>
+                            <p><strong><?= __('Series')?>:</strong> <?= $comic['series']['name'] ?></p>
+                        <?php endif; ?>
+
+                        <!-- Edition Number -->
+                        <?php if (isset($comic['issueNumber'])): ?>
+                            <p><strong><?= __('Edition Number')?>:</strong> <?= $comic['issueNumber'] ?></p>
+                        <?php endif; ?>
+
+                        <!-- Release Date -->
+                        <?php if (isset($comic['dates'][0]['date'])): ?>
+                            <p><strong><?= __('Release Date')?>:</strong> <?= date('d/m/Y', strtotime($comic['dates'][0]['date'])) ?></p>
+                        <?php endif; ?>
+
+                        <!-- Number of Pages -->
+                        <?php if (isset($comic['pageCount'])): ?>
+                            <p><strong><?= __('Number of Pages')?>:</strong> <?= $comic['pageCount'] ?></p>
+                        <?php endif; ?>
+
+                        <!-- Price -->
+                        <?php if (isset($comic['prices'][0]['price'])): ?>
+                            <p><strong><?= __('Price')?>:</strong> $<?= $comic['prices'][0]['price'] ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div>
+                        <p class="description"><?= $comic['description'] ?></p>
+                    </div>
+                </div>
+            </div>
+        <?php else: ?>
+            <!-- return if the maximum number of requests is reached -->
+            <p><?= __('Maximum number of requests reached.') ?></p>
+        <?php endif; ?>
+    </div>
+
+    <button class="btn-back" onclick="history.back()"><?= __('back') ?></button>
+</div>
