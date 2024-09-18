@@ -1,0 +1,47 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common =true) {
+  .first-banner {
+    .slider-content {
+      position: relative;
+
+      .slick-arrow {
+        background-color: transparent;
+        
+        &:before {
+          color: #fff;
+        }
+      }
+
+      .img-banner {
+        .img {
+          width: 1920px;
+          height: 500px !important;
+        }
+      }
+
+      .slick-dots {
+        border: none;
+        bottom: 50px;
+        position: absolute;
+
+        .slick-active {
+          button {
+            background-color: @green1;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {}
