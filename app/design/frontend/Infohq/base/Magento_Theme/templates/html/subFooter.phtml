@@ -1,0 +1,45 @@
+<div class="sub-footer">
+    <div class="transactional-block">
+        <div class="block payment">
+            <h4><?= __('Form of payment') ?></h4>
+            <div class="logo-block logo-payment">
+                <img src="https://via.placeholder.com/25x20.png" alt="Master Card">
+                <img src="https://via.placeholder.com/35x10.png" alt="Visa">
+                <img src="https://via.placeholder.com/34x24.png" alt="Diners Club">
+                <img src="https://via.placeholder.com/36x20.png" alt="<?= __('Ticket')?>">
+                <img src="https://via.placeholder.com/45x20.png" alt="<?= __('Deposit')?>">
+            </div>
+        </div>
+        <div class="block shipping">
+            <h4><?= __('Shipping Method') ?></h4>
+            <div class="logo-block logo-shipping">
+                <img src="https://via.placeholder.com/90x24.png" alt="Correios">
+                <img src="https://via.placeholder.com/60x18.png" alt="Pac">
+                <img src="https://via.placeholder.com/60x20.png" alt="Sedex">
+            </div>
+        </div>
+        <div class="block certificate">
+            <h4><?= __('Security and Certification') ?></h4>
+            <div class="logo-block logo-certificate">
+                <img src="https://via.placeholder.com/40x40.png" alt="msw">
+                <img src="https://via.placeholder.com/50x20.png" alt="<?= __('Safe Internet')?>">
+                <img src="https://via.placeholder.com/30x30.png" alt="<?= __('Ebit Assessment')?>">
+            </div>
+        </div>
+    </div>
+    <div class="footer-info">
+        <div class="addres-block">
+            <p class="msg">
+                <span><?= __('Razão social - CNPJ 123456456.545/000 | Endereço físico. 1234 | Bairro | Cidade - Estado | CEP 86600-000') ?></span>
+            </p>
+        </div>
+        <div class="copyright-block">
+            <a href="http://www.infohq.com.br" id="msw" class="msw" target="_blank" title="onkey Magento E-commerce">
+                <img class="logo-footer" src="<?= $block->escapeUrl($block->getViewFileUrl('image/infohq/logo-black.svg'))?>" alt="Infohq E-commerce Magento">
+            </a>
+            <p class="msg">
+                <span><?= __('Where the worlds meet') ?></span>
+            </p>
+        </div>
+    </div>
+</div>

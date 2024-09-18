@@ -1,0 +1,19 @@
+{
+    "name": "Infohq/base",
+    "description": "Magento 2 Theme InfoHQ Comic",
+    "require": {
+    "InfoHQ/base": "100.0.*",
+    "magento/framework": "100.0.*"
+    },
+    "type": "magento2-theme",
+    "version": "100.0.1",
+    "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+    ],
+    "autoload": {
+      "files": [
+        "Registration.php"
+      ]
+    }
+  }

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<container htmlClass="main-banner" htmlId="main-banner" name="main.banner" htmlTag="div" before="-">
+				<block class="Magento\Framework\View\Element\Template" name="banner" template="Magento_Theme::banner/mainBanner.phtml" before="-" />
+				<block class="Magento\Framework\View\Element\Template" name="benefits" template="Magento_Theme::banner/benefits.phtml" after="banner" />
+			</container>
+			<container htmlClass="best-sellers-block" htmlId="best-sellers-block" name="best.sellers.block" htmlTag="div" after="main.banner">
+				<block class="Magento\Framework\View\Element\Template" name="best-sellers" template="Magento_Theme::home/bestSellersBlock.phtml" before="-" />
+			</container>
+			<container htmlClass="news-block" htmlId="news-block" name="news.block" htmlTag="div" after="best.sellers.block">
+				<block class="Magento\Framework\View\Element\Template" name="news" template="Magento_Theme::home/newsBlock.phtml" before="-" />
+			</container>
+			<container htmlClass="promotions-block" htmlId="promotions-block" name="promotions.block" htmlTag="div" after="news.block">
+				<block class="Magento\Framework\View\Element\Template" name="promotions" template="Magento_Theme::home/promotionsBlock.phtml" before="-" />
+			</container>
+		</referenceContainer>
+
+		<referenceBlock name="cms_page" remove="true" />
+		<referenceBlock name="page.main.title" display="false" />
+		<referenceBlock name="catalog.compare.link" remove="true" />
+		<referenceBlock name="catalog.compare.sidebar" remove="true" />
+	</body>
+</page>

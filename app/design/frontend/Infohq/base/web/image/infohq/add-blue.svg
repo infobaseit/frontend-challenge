@@ -1,0 +1,25 @@
+<svg id="mais" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6d1d;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #71360a;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="39" height="39" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" in="SourceAlpha"/>
+      <feFlood result="flood" flood-opacity="0.2"/>
+      <feComposite result="composite" operator="out" in2="blur"/>
+      <feOffset result="offset" dy="-2"/>
+      <feComposite result="composite-2" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle class="cls-1" cx="19.5" cy="19.5" r="19.5"/>
+  <path id="mais-2" data-name="mais" class="cls-2" d="M970.466,3292.33h-6.933v-6.93h-5.2v6.93H951.4v5.2h6.933v6.94h5.2v-6.94h6.933v-5.2Z" transform="translate(-941 -3275)"/>
+</svg>

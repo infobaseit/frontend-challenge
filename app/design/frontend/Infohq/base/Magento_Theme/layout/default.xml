@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <!-- <referenceContainer name="content">
+      <block class="Magento\Framework\View\Element\Template" name="maintenance.page" template="Magento_Theme::503.phtml"/>
+    </referenceContainer> -->
+
+    <referenceBlock name="logo">
+        <arguments>
+            <argument name="logo_file" xsi:type="string">image/infohq/logo-full.svg</argument>
+            <argument name="logo_alt" xsi:type="string">InfoHQ commic store</argument>
+        </arguments>
+    </referenceBlock>
+
+    <referenceContainer name="header.container">
+        <container name="block.customer" htmlTag="div" htmlClass="block-customer" />
+        <block class="Magento\Theme\Block\Html\Footer" name="contac-header" template="Magento_Theme::html/contactUs.phtml" before="minicart" />
+    </referenceContainer>
+
+    <referenceContainer name="footer-container">
+        <container name="contentFooterLinks" htmlTag="div" htmlClass="content-footer-links">
+            <block class="Magento\Theme\Block\Html\Footer" name="block-description" template="Magento_Theme::html/footerDescription.phtml" after="-" />
+            <block class="Magento\Theme\Block\Html\Footer" name="block-links" template="Magento_Theme::html/footerLinks.phtml" after="-" />
+            <block class="Magento\Theme\Block\Html\Footer" name="block-social-links" template="Magento_Theme::html/footerSocialLinks.phtml" after="-" />
+        </container>
+        <container name="blockSubFooter" htmlTag="div" htmlClass="block-sub-footer">
+            <block class="Magento\Framework\View\Element\Template" name="block-sub-footer" template="Magento_Theme::html/subFooter.phtml" before="footer-container" />
+        </container>
+    </referenceContainer>
+
+    <!-- header -->
+    <referenceBlock name="header" remove="true"/>
+    <referenceBlock name="currency" remove="true"/>
+    <referenceBlock name="wish-list-link" remove="true"/>
+    <referenceBlock name="my-account-link" remove="true" />
+    <referenceBlock name="header.panel.wrapper" remove="true"/>
+
+    <move element="minicart" destination="header-wrapper" after="-"/>
+    <move element="top.links" destination="block.customer" after="-"/>
+    <move element="block.customer" destination="header-wrapper" after="logo"/>
+    <move element="top.search" destination="header-wrapper" after="top.links"/>
+    <move element="contac-header" destination="header-wrapper" before="minicart"/>
+
+    <!-- footer -->
+    <referenceBlock name="copyright" remove="true"/>
+    <referenceBlock name="report.bugs" remove="true"/>
+    <referenceBlock name="footer_links" remove="true"/>
+
+    <move element="footer-container" destination="footer" before="contentFooterLinks"/>
+
+  </body>
+</page>

@@ -1,0 +1,16 @@
+<svg id="igual" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6d1d;
+      }
+
+      .cls-2 {
+        fill: #71360a;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="19.5" cy="19.5" r="19.5"/>
+  <path id="igual-2" data-name="igual" class="cls-2" d="M1278.4,3287.13v5.2h19.07v-5.2H1278.4Zm0,9.54v5.2h19.07v-5.2H1278.4Z" transform="translate(-1268 -3275)"/>
+</svg>

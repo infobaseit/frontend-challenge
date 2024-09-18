@@ -1,0 +1,69 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common =true) {
+    body {
+        font-family: @fontBase;
+
+        .page-wrapper {
+            min-height: auto;
+
+            .page-header {
+                .msg-white,
+                .msg-green {
+                    font-size: @font-size-md;
+                    text-transform: uppercase;
+                    font-weight: @font-weight__bold;
+                }
+
+                .msg-white {
+                    color: @white;
+                }
+
+                .msg-green {
+                    color: @green1;
+                }
+            }
+
+            .page-main {
+                padding: 0 !important;
+                z-index: 5;
+
+                h2 {
+                    color: @blue3;
+                    text-align: center;
+                    letter-spacing: -1.9px;
+                    text-transform: uppercase;
+                    font-weight: @font-weight__semibold;
+                }
+            }
+        }
+    }
+
+    input::-webkit-input-placeholder {
+        color: @gray4 !important;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ="max") and (@break =@screen__m) {}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__m) {
+    .navigation,
+    .breadcrumbs,
+    .page-header .header.panel,
+    .header.content,
+    .footer.content,
+    .page-wrapper > .widget,
+    .page-wrapper > .page-bottom,
+    .block.category.event,
+    .top-container,
+    .page-main {
+        max-width: 1370px;
+    }
+}

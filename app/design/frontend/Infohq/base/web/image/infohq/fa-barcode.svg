@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6d1d;
+        stroke: #f4d906;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="690" y="710" width="53" height="50" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.6"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="translate(-691.5 -711.5)" style="fill: #ff6d1d; filter: url(#filter)">
+    <path id="fa-barcode" class="cls-1" d="M699.368,725.3l-1.044.286,6.27,23.894,1.044-.286Zm1.045-.285-0.531.145,6.266,23.876,0.53-.145Zm1.558-.427-0.514.141,6.266,23.877,0.514-.141Zm2.6-.712-0.514.141,6.266,23.876,0.513-.14Zm2.6-.712-1.028.281,6.266,23.877,1.027-.282Zm2.089-.571-0.514.14,6.265,23.877,0.514-.141Zm1.044-.286-0.514.14,6.266,23.877,0.514-.141Zm1.045-.286-0.514.14,6.265,23.877,0.514-.14Zm2.6-.712-1.044.286,6.266,23.876,1.044-.286Zm2.6-.712-1.044.286,6.266,23.876,1.044-.286Zm2.089-.572-1.044.286,6.266,23.876,1.044-.285Zm2.089-.571-1.044.285,6.265,23.877,1.045-.286Zm1.559-.427-1.045.286,6.266,23.877,1.044-.286Zm3.133-.857-1.558.426,6.265,23.877,1.559-.427Zm1.044-.286-0.53.146,6.266,23.876,0.53-.145Zm1.559-.426-1.045.286,6.271,23.894,1.044-.286Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use transform="translate(-691.5 -711.5)" xlink:href="#fa-barcode" style="stroke: #71360a; filter: none; fill: none"/>
+</svg>

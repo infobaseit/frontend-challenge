@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @var \Magento\Customer\Block\Account\AuthorizationLink $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+$dataPostParam = '';
+if ($block->isLoggedIn()) {
+  $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+}
+?>
+<li class="link authorization-link" data-label="<?= $escaper->escapeHtml(__('or')) ?>">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?> <?= /* @noEscape */ $dataPostParam ?>>
+        <span class="msg-white"><?= __('Sign')?></span>
+        <span class="msg-green"><?= __('in')?></span>
+    </a>
+</li>

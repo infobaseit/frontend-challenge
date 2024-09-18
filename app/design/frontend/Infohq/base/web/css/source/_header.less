@@ -1,0 +1,203 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common =true) {
+    .fixed-header {
+        top: 0;
+        z-index: 999;
+        position: fixed;
+        transition: all 0.5s;
+    }
+
+    body.fixed-header-padding {
+        padding-top: 60px;
+    }
+
+    .page-header {
+        width: 100%;
+        z-index: 1000;
+        background-color: @blue1;
+        .lib-vendor-prefix-display();
+
+        .header.content {
+            width: 100%;
+            padding: 0 20px;
+            .lib-vendor-prefix-display();
+            .lib-vendor-box-align(center);
+            .mixin_justify_content_space_between();
+
+            .logo {
+                margin: 0;
+                height: 150px;
+                .lib-vendor-prefix-display();
+
+                img {
+                    width: 14rem;
+                }
+            }
+
+            .block-customer {
+                height: 40px;
+                width: 160px;
+                .lib-vendor-prefix-display();
+
+                &:before {
+                    content: "\f007";
+                    font-family: @fontRegular;
+                    color: @yellow;
+                    font-size: @font-size-xbigger;
+                    padding: 0 10px;
+                }
+
+                .links {
+                    padding: 0;
+                    width: 200px;
+                    list-style: none;
+                    .lib-vendor-prefix-display();
+                    .lib-vendor-prefix-flex-direction (column);
+
+                    li {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .block-search {
+                width: 380px;
+
+                .block-content {
+                    .control {
+                        width: 100%;
+                        padding: 0;
+
+                        #search {
+                            border-radius: 5px;
+                        }
+
+                        .nested {
+                            .lib-visually-hidden();
+                        }
+                    }
+                }
+            }
+
+            .actions {
+                .search {
+                    &:before {
+                        color: @blue1;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            .contact-header {
+                .lib-vendor-prefix-display();
+
+                .content-icon {
+                    &:before {
+                        content: "\f095";
+                        font-family: @fontSolid;
+                        color: @yellow;
+                        font-size: @font-size-bigger;
+                        margin-right: 10px;
+                    }
+                }
+
+                .content-msg {
+                    .lib-vendor-prefix-display();
+                    .lib-vendor-prefix-flex-direction (column);
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
+    .fixed-header {
+        position: relative;
+        padding: 10px 0;
+    }
+
+    body.fixed-header-padding {
+        padding-top: 0;
+    }
+
+    .page-header {
+        .header.content {
+            padding: 0 10px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .logo {
+                height: 100px;
+
+                img {
+                    width: 10rem;
+                }
+            }
+
+            .block-customer {
+                width: auto;
+                height: auto;
+                margin-top: 10px;
+
+                &:before {
+                    display: none;
+                }
+
+                .links {
+                    width: auto;
+                    flex-direction: column;
+
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .block-search {
+                width: 100%;
+
+                .block-content {
+                    .control {
+                        padding: 0 10px;
+
+                        #search {
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .contact-header {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+
+                .content-icon {
+                    margin-bottom: 5px;
+
+                    &:before {
+                        font-size: @font-size-bigger;
+                    }
+                }
+
+                .content-msg {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ="min") and (@break =@screen__m) {
+}
