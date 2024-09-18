@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/Router/Base/Config.xsd">
+    <router id="standard">
+        <route id="comics" frontName="comics">
+            <module name="Infohq_Comics"/>
+        </route>
+    </router>
+</config>

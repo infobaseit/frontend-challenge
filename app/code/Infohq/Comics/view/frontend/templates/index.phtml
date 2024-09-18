@@ -1,0 +1,39 @@
+<?php
+// Getting the pagination data and comics
+
+$paginationData = $block->getComics();
+$comics = isset($paginationData['items']) ? $paginationData['items'] : [];
+$totalPages = isset($paginationData['totalPages']) ? $paginationData['totalPages'] : 1;
+$currentPage = isset($paginationData['currentPage']) ? $paginationData['currentPage'] : 1;
+?>
+
+<div class="content-cominc">
+    <h2><?= __('Marvel Comics List') ?></h2>
+
+    <!--hq listing-->
+    <ul class="book-list">
+        <?php foreach ($comics as $comic): ?>
+            <li class="comic-item">
+                <a class="imgage-content" href="<?= $block->getUrl('comics/index/view', ['id' => $comic['id']]) ?>">
+                    <img src="<?= $comic['thumbnail']['path'] . '/portrait_uncanny.' . $comic['thumbnail']['extension'] ?>" alt="<?= $comic['title'] ?>">
+                    <span class="hq-tittle"><?= $comic['title'] ?></span>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <!-- pagination -->
+    <div class="pagination">
+        <?php if ($totalPages > 1): ?>
+            <ul>
+                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                    <li>
+                        <a href="<?= $block->getUrl('comics/index/index', ['p' => $i]) ?>" <?= $i == $currentPage ? 'class="active"' : '' ?>>
+                            <?= $i ?>
+                        </a>
+                    </li>
+                <?php endfor; ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+</div>
